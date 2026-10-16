@@ -1,0 +1,8 @@
+.env
+.env*
+.env.*
+credentials.json
+credential.json
+token.json
+api_key.json
+secrets.zsh
