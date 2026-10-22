@@ -1,6 +1,8 @@
 #!/bin/sh
-
-alias hmterser="html-minifier-terser --decode-entities --minify-css --minify-js --minify-urls --remove-comments --remove-script-type-attributes  --remove-style-link-type-attributes  --use-short-doctype --sort-attributes --sort-class-name"
+#minhtml --keep-html-and-head-opening-tags --preserve-brace-template-syntax --minify-css --minify-js -o <output filename>
+alias kgls="kgls 2>/dev/null"
+alias html-minifier-terser="html-minifier-terser --minify-css --minify-js"
+alias html_mimifier_terser="html-minifier-terser --decode-entities --minify-css --minify-js --minify-urls --remove-comments --remove-script-type-attributes  --remove-style-link-type-attributes  --use-short-doctype --sort-attributes --sort-class-name"
 alias mhtml-to-html="mhtml-to-html --enable-scripts --fetch-missing-resources"
 alias bat="bat --style=plain 2>/dev/null"
 alias ytt="tcs ~/isaac/may/q1/ytt"
@@ -193,4 +195,4 @@ if is-at-least 4.2.0; then
   alias -s ace="unace l"
 fi
 
-zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/data/data/com.termux/files/usr/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
